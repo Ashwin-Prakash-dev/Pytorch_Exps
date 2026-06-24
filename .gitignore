@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyTorch / data artifacts (regenerable)
+*.pt
+*.pth
+*.ckpt
+data/raw/
+data/cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# NOTE: experiment output plots (experiments/*/outputs/*.png) are intentionally
+# tracked so results render on GitHub. Add patterns here if they get too large.
