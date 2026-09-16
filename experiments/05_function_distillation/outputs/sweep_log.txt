@@ -1,0 +1,479 @@
+34 configs queued
+
+=== [1/34] linear (elapsed 0s) ===
+[linear] arch=linear kwargs={} params=785
+  epoch  1 | train MSE  64.2213 | val MSE  46.2792
+  epoch  2 | train MSE  40.9244 | val MSE  37.6313
+  epoch  3 | train MSE  34.6480 | val MSE  32.2892
+  epoch  4 | train MSE  30.7927 | val MSE  29.0807
+  epoch  5 | train MSE  28.4242 | val MSE  27.1122
+  epoch  6 | train MSE  26.8943 | val MSE  25.8232
+  epoch  7 | train MSE  25.8276 | val MSE  24.9026
+  epoch  8 | train MSE  25.0258 | val MSE  24.2104
+  epoch  9 | train MSE  24.3858 | val MSE  23.6386
+  epoch 10 | train MSE  23.8436 | val MSE  23.1349
+  -> val_mse=23.1349  test_mse=23.5473  test_agreement=0.9240
+
+=== [2/34] conventional_mlp_H32 (elapsed 19s) ===
+[conventional_mlp_H32] arch=conventional_mlp kwargs={'hidden': 32} params=26209
+  epoch  1 | train MSE  46.8207 | val MSE  21.1032
+  epoch  2 | train MSE  15.2470 | val MSE  10.3671
+  epoch  3 | train MSE   8.0218 | val MSE   6.4191
+  epoch  4 | train MSE   5.3516 | val MSE   4.5896
+  epoch  5 | train MSE   4.1744 | val MSE   3.9744
+  epoch  6 | train MSE   3.6622 | val MSE   3.6000
+  epoch  7 | train MSE   3.3436 | val MSE   3.3902
+  epoch  8 | train MSE   3.1363 | val MSE   3.2035
+  epoch  9 | train MSE   2.9542 | val MSE   3.1325
+  epoch 10 | train MSE   2.8195 | val MSE   3.1377
+  -> val_mse=3.1377  test_mse=3.0427  test_agreement=0.9901
+
+=== [3/34] conventional_mlp_H64 (elapsed 39s) ===
+[conventional_mlp_H64] arch=conventional_mlp kwargs={'hidden': 64} params=54465
+  epoch  1 | train MSE  40.9674 | val MSE  18.3921
+  epoch  2 | train MSE  11.5134 | val MSE   6.3195
+  epoch  3 | train MSE   4.9541 | val MSE   4.2500
+  epoch  4 | train MSE   3.7217 | val MSE   3.5919
+  epoch  5 | train MSE   3.1525 | val MSE   3.0935
+  epoch  6 | train MSE   2.8268 | val MSE   2.8472
+  epoch  7 | train MSE   2.5494 | val MSE   2.7196
+  epoch  8 | train MSE   2.3771 | val MSE   2.4552
+  epoch  9 | train MSE   2.2191 | val MSE   2.3953
+  epoch 10 | train MSE   2.1054 | val MSE   2.2535
+  -> val_mse=2.2535  test_mse=2.2982  test_agreement=0.9915
+
+=== [4/34] conventional_mlp_H128 (elapsed 59s) ===
+[conventional_mlp_H128] arch=conventional_mlp kwargs={'hidden': 128} params=117121
+  epoch  1 | train MSE  31.3814 | val MSE  10.9505
+  epoch  2 | train MSE   5.7890 | val MSE   3.3109
+  epoch  3 | train MSE   2.7455 | val MSE   2.5300
+  epoch  4 | train MSE   2.1295 | val MSE   2.2298
+  epoch  5 | train MSE   1.8050 | val MSE   1.8561
+  epoch  6 | train MSE   1.5505 | val MSE   1.7026
+  epoch  7 | train MSE   1.3842 | val MSE   1.6127
+  epoch  8 | train MSE   1.2664 | val MSE   1.6371
+  epoch  9 | train MSE   1.1458 | val MSE   1.4287
+  epoch 10 | train MSE   1.0571 | val MSE   1.3865
+  -> val_mse=1.3865  test_mse=1.3831  test_agreement=0.9951
+
+=== [5/34] compositional_H32_N1 (elapsed 82s) ===
+[compositional_H32_N1] arch=compositional_relu kwargs={'hidden': 32, 'n_blocks': 1} params=28321
+  epoch  1 | train MSE  39.5336 | val MSE  18.7520
+  epoch  2 | train MSE  11.1835 | val MSE   6.9721
+  epoch  3 | train MSE   5.5958 | val MSE   4.4964
+  epoch  4 | train MSE   4.3313 | val MSE   3.9591
+  epoch  5 | train MSE   3.7667 | val MSE   3.4969
+  epoch  6 | train MSE   3.1620 | val MSE   3.0633
+  epoch  7 | train MSE   2.8470 | val MSE   2.8658
+  epoch  8 | train MSE   2.6600 | val MSE   2.7595
+  epoch  9 | train MSE   2.5202 | val MSE   2.7022
+  epoch 10 | train MSE   2.3859 | val MSE   2.4968
+  -> val_mse=2.4968  test_mse=2.6003  test_agreement=0.9910
+
+=== [6/34] deepplain_H32_N1 (elapsed 102s) ===
+[deepplain_H32_N1] arch=deep_plain_mlp kwargs={'hidden': 32, 'n_layers': 3} params=28321
+  epoch  1 | train MSE  47.2540 | val MSE  18.8614
+  epoch  2 | train MSE  14.0156 | val MSE  11.0197
+  epoch  3 | train MSE   9.6842 | val MSE   8.2644
+  epoch  4 | train MSE   8.0893 | val MSE   7.4273
+  epoch  5 | train MSE   7.2301 | val MSE   6.5588
+  epoch  6 | train MSE   6.3175 | val MSE   6.3148
+  epoch  7 | train MSE   5.5545 | val MSE   5.5935
+  epoch  8 | train MSE   5.1151 | val MSE   5.1606
+  epoch  9 | train MSE   4.6546 | val MSE   4.8038
+  epoch 10 | train MSE   4.1190 | val MSE   4.1913
+  -> val_mse=4.1913  test_mse=4.0640  test_agreement=0.9868
+
+=== [7/34] compositional_H32_N2 (elapsed 121s) ===
+[compositional_H32_N2] arch=compositional_relu kwargs={'hidden': 32, 'n_blocks': 2} params=31489
+  epoch  1 | train MSE  37.9153 | val MSE  13.2651
+  epoch  2 | train MSE   9.1453 | val MSE   7.5068
+  epoch  3 | train MSE   5.4503 | val MSE   4.2494
+  epoch  4 | train MSE   3.8218 | val MSE   3.5392
+  epoch  5 | train MSE   3.1352 | val MSE   3.1565
+  epoch  6 | train MSE   2.8082 | val MSE   2.7420
+  epoch  7 | train MSE   2.5044 | val MSE   2.6096
+  epoch  8 | train MSE   2.3713 | val MSE   2.5257
+  epoch  9 | train MSE   2.1952 | val MSE   2.3728
+  epoch 10 | train MSE   2.0889 | val MSE   2.2897
+  -> val_mse=2.2897  test_mse=2.2641  test_agreement=0.9916
+
+=== [8/34] deepplain_H32_N2 (elapsed 142s) ===
+[deepplain_H32_N2] arch=deep_plain_mlp kwargs={'hidden': 32, 'n_layers': 6} params=31489
+  epoch  1 | train MSE  53.5446 | val MSE  21.7136
+  epoch  2 | train MSE  13.8546 | val MSE   9.4524
+  epoch  3 | train MSE   9.0741 | val MSE   7.8045
+  epoch  4 | train MSE   7.4693 | val MSE   6.6231
+  epoch  5 | train MSE   6.2226 | val MSE   5.8753
+  epoch  6 | train MSE   5.6873 | val MSE   5.2988
+  epoch  7 | train MSE   5.0457 | val MSE   5.0512
+  epoch  8 | train MSE   4.6572 | val MSE   4.5519
+  epoch  9 | train MSE   4.1484 | val MSE   4.1655
+  epoch 10 | train MSE   3.7957 | val MSE   4.2290
+  -> val_mse=4.2290  test_mse=4.2743  test_agreement=0.9885
+
+=== [9/34] compositional_H32_N4 (elapsed 163s) ===
+[compositional_H32_N4] arch=compositional_relu kwargs={'hidden': 32, 'n_blocks': 4} params=37825
+  epoch  1 | train MSE  33.5085 | val MSE   9.1695
+  epoch  2 | train MSE   7.1657 | val MSE   5.0835
+  epoch  3 | train MSE   4.1427 | val MSE   3.2824
+  epoch  4 | train MSE   2.9905 | val MSE   2.8344
+  epoch  5 | train MSE   2.5102 | val MSE   2.4061
+  epoch  6 | train MSE   2.2097 | val MSE   2.2307
+  epoch  7 | train MSE   2.0191 | val MSE   2.2886
+  epoch  8 | train MSE   1.8916 | val MSE   2.0185
+  epoch  9 | train MSE   1.7572 | val MSE   1.9586
+  epoch 10 | train MSE   1.6359 | val MSE   2.0257
+  -> val_mse=2.0257  test_mse=2.0694  test_agreement=0.9933
+
+=== [10/34] deepplain_H32_N4 (elapsed 187s) ===
+[deepplain_H32_N4] arch=deep_plain_mlp kwargs={'hidden': 32, 'n_layers': 12} params=37825
+  epoch  1 | train MSE  61.5541 | val MSE  21.6085
+  epoch  2 | train MSE  13.9547 | val MSE   9.0343
+  epoch  3 | train MSE   7.8880 | val MSE   6.1859
+  epoch  4 | train MSE   5.6503 | val MSE   4.5523
+  epoch  5 | train MSE   4.3558 | val MSE   4.0829
+  epoch  6 | train MSE   3.8373 | val MSE   3.7510
+  epoch  7 | train MSE   3.5063 | val MSE   3.4458
+  epoch  8 | train MSE   3.2178 | val MSE   3.4232
+  epoch  9 | train MSE   2.9847 | val MSE   2.9536
+  epoch 10 | train MSE   2.7092 | val MSE   2.9925
+  -> val_mse=2.9925  test_mse=3.0311  test_agreement=0.9902
+
+=== [11/34] compositional_H32_N8 (elapsed 210s) ===
+[compositional_H32_N8] arch=compositional_relu kwargs={'hidden': 32, 'n_blocks': 8} params=50497
+  epoch  1 | train MSE  26.3853 | val MSE   7.6879
+  epoch  2 | train MSE   5.1680 | val MSE   3.8701
+  epoch  3 | train MSE   3.1269 | val MSE   2.7041
+  epoch  4 | train MSE   2.4692 | val MSE   2.4479
+  epoch  5 | train MSE   2.0743 | val MSE   2.4367
+  epoch  6 | train MSE   1.8681 | val MSE   2.0196
+  epoch  7 | train MSE   1.7054 | val MSE   1.8876
+  epoch  8 | train MSE   1.5549 | val MSE   1.7864
+  epoch  9 | train MSE   1.4248 | val MSE   1.7230
+  epoch 10 | train MSE   1.3614 | val MSE   1.6723
+  -> val_mse=1.6723  test_mse=1.6805  test_agreement=0.9938
+
+=== [12/34] deepplain_H32_N8 (elapsed 241s) ===
+[deepplain_H32_N8] arch=deep_plain_mlp kwargs={'hidden': 32, 'n_layers': 24} params=50497
+  epoch  1 | train MSE  55.5908 | val MSE  17.7816
+  epoch  2 | train MSE  12.3354 | val MSE   8.1332
+  epoch  3 | train MSE   6.8561 | val MSE   5.0089
+  epoch  4 | train MSE   4.5790 | val MSE   4.1719
+  epoch  5 | train MSE   3.7059 | val MSE   3.5559
+  epoch  6 | train MSE   3.2853 | val MSE   3.4790
+  epoch  7 | train MSE   3.0379 | val MSE   3.0047
+  epoch  8 | train MSE   2.8030 | val MSE   2.8587
+  epoch  9 | train MSE   2.6671 | val MSE   2.6659
+  epoch 10 | train MSE   2.4897 | val MSE   2.9097
+  -> val_mse=2.9097  test_mse=3.0078  test_agreement=0.9890
+
+=== [13/34] compositional_H64_N1 (elapsed 273s) ===
+[compositional_H64_N1] arch=compositional_relu kwargs={'hidden': 64, 'n_blocks': 1} params=62785
+  epoch  1 | train MSE  33.7162 | val MSE  10.2391
+  epoch  2 | train MSE   7.5875 | val MSE   5.1048
+  epoch  3 | train MSE   4.1186 | val MSE   3.5314
+  epoch  4 | train MSE   3.1316 | val MSE   2.8519
+  epoch  5 | train MSE   2.6149 | val MSE   2.9787
+  epoch  6 | train MSE   2.2924 | val MSE   2.2707
+  epoch  7 | train MSE   2.0496 | val MSE   2.1302
+  epoch  8 | train MSE   1.8809 | val MSE   2.1349
+  epoch  9 | train MSE   1.7509 | val MSE   1.9274
+  epoch 10 | train MSE   1.6115 | val MSE   1.8805
+  -> val_mse=1.8805  test_mse=1.7738  test_agreement=0.9929
+
+=== [14/34] deepplain_H64_N1 (elapsed 294s) ===
+[deepplain_H64_N1] arch=deep_plain_mlp kwargs={'hidden': 64, 'n_layers': 3} params=62785
+  epoch  1 | train MSE  38.9811 | val MSE  14.8726
+  epoch  2 | train MSE  10.2889 | val MSE   6.5929
+  epoch  3 | train MSE   5.3977 | val MSE   4.6061
+  epoch  4 | train MSE   4.1921 | val MSE   3.6308
+  epoch  5 | train MSE   3.3439 | val MSE   3.5848
+  epoch  6 | train MSE   2.9010 | val MSE   2.8258
+  epoch  7 | train MSE   2.6548 | val MSE   2.6883
+  epoch  8 | train MSE   2.4415 | val MSE   2.5106
+  epoch  9 | train MSE   2.3042 | val MSE   2.4344
+  epoch 10 | train MSE   2.2107 | val MSE   2.3173
+  -> val_mse=2.3173  test_mse=2.3860  test_agreement=0.9914
+
+=== [15/34] compositional_H64_N2 (elapsed 314s) ===
+[compositional_H64_N2] arch=compositional_relu kwargs={'hidden': 64, 'n_blocks': 2} params=75265
+  epoch  1 | train MSE  31.1888 | val MSE   8.7027
+  epoch  2 | train MSE   5.6808 | val MSE   3.5892
+  epoch  3 | train MSE   3.0990 | val MSE   2.9184
+  epoch  4 | train MSE   2.3957 | val MSE   2.5498
+  epoch  5 | train MSE   2.0786 | val MSE   2.1338
+  epoch  6 | train MSE   1.8529 | val MSE   2.1251
+  epoch  7 | train MSE   1.6631 | val MSE   1.7852
+  epoch  8 | train MSE   1.4663 | val MSE   1.7571
+  epoch  9 | train MSE   1.3670 | val MSE   1.5488
+  epoch 10 | train MSE   1.2916 | val MSE   1.6134
+  -> val_mse=1.6134  test_mse=1.5584  test_agreement=0.9944
+
+=== [16/34] deepplain_H64_N2 (elapsed 345s) ===
+[deepplain_H64_N2] arch=deep_plain_mlp kwargs={'hidden': 64, 'n_layers': 6} params=75265
+  epoch  1 | train MSE  40.6728 | val MSE  12.8212
+  epoch  2 | train MSE   8.1510 | val MSE   5.7178
+  epoch  3 | train MSE   4.9629 | val MSE   4.0769
+  epoch  4 | train MSE   3.4453 | val MSE   3.1631
+  epoch  5 | train MSE   2.8387 | val MSE   2.7628
+  epoch  6 | train MSE   2.5445 | val MSE   2.6588
+  epoch  7 | train MSE   2.3027 | val MSE   2.3097
+  epoch  8 | train MSE   2.0728 | val MSE   2.2758
+  epoch  9 | train MSE   1.9282 | val MSE   2.0600
+  epoch 10 | train MSE   1.8098 | val MSE   2.0513
+  -> val_mse=2.0513  test_mse=2.0573  test_agreement=0.9922
+
+=== [17/34] compositional_H64_N4 (elapsed 366s) ===
+[compositional_H64_N4] arch=compositional_relu kwargs={'hidden': 64, 'n_blocks': 4} params=100225
+  epoch  1 | train MSE  25.0585 | val MSE   5.4108
+  epoch  2 | train MSE   4.3744 | val MSE   3.3038
+  epoch  3 | train MSE   2.8876 | val MSE   3.0239
+  epoch  4 | train MSE   2.3297 | val MSE   2.3849
+  epoch  5 | train MSE   2.0206 | val MSE   2.4299
+  epoch  6 | train MSE   1.7099 | val MSE   2.0020
+  epoch  7 | train MSE   1.5483 | val MSE   1.8217
+  epoch  8 | train MSE   1.3762 | val MSE   1.5928
+  epoch  9 | train MSE   1.3019 | val MSE   1.5542
+  epoch 10 | train MSE   1.1695 | val MSE   1.4450
+  -> val_mse=1.4450  test_mse=1.4007  test_agreement=0.9948
+
+=== [18/34] deepplain_H64_N4 (elapsed 390s) ===
+[deepplain_H64_N4] arch=deep_plain_mlp kwargs={'hidden': 64, 'n_layers': 12} params=100225
+  epoch  1 | train MSE  41.3422 | val MSE   9.9960
+  epoch  2 | train MSE   7.0805 | val MSE   4.4509
+  epoch  3 | train MSE   3.8164 | val MSE   3.6180
+  epoch  4 | train MSE   3.0378 | val MSE   2.7342
+  epoch  5 | train MSE   2.6078 | val MSE   2.8252
+  epoch  6 | train MSE   2.3073 | val MSE   2.4633
+  epoch  7 | train MSE   2.1252 | val MSE   2.2993
+  epoch  8 | train MSE   1.9285 | val MSE   2.1195
+  epoch  9 | train MSE   1.7716 | val MSE   1.9248
+  epoch 10 | train MSE   1.6025 | val MSE   1.8081
+  -> val_mse=1.8081  test_mse=1.8569  test_agreement=0.9937
+
+=== [19/34] compositional_H64_N8 (elapsed 416s) ===
+[compositional_H64_N8] arch=compositional_relu kwargs={'hidden': 64, 'n_blocks': 8} params=150145
+  epoch  1 | train MSE  23.1216 | val MSE   5.5217
+  epoch  2 | train MSE   4.0356 | val MSE   2.8841
+  epoch  3 | train MSE   2.5887 | val MSE   2.3803
+  epoch  4 | train MSE   2.0627 | val MSE   2.0675
+  epoch  5 | train MSE   1.7110 | val MSE   1.7580
+  epoch  6 | train MSE   1.4720 | val MSE   1.6517
+  epoch  7 | train MSE   1.3579 | val MSE   1.5253
+  epoch  8 | train MSE   1.1920 | val MSE   1.4666
+  epoch  9 | train MSE   1.0994 | val MSE   1.3503
+  epoch 10 | train MSE   1.0090 | val MSE   1.2528
+  -> val_mse=1.2528  test_mse=1.1880  test_agreement=0.9945
+
+=== [20/34] deepplain_H64_N8 (elapsed 447s) ===
+[deepplain_H64_N8] arch=deep_plain_mlp kwargs={'hidden': 64, 'n_layers': 24} params=150145
+  epoch  1 | train MSE  47.5612 | val MSE  16.5732
+  epoch  2 | train MSE  11.3436 | val MSE   8.4554
+  epoch  3 | train MSE   7.4035 | val MSE   5.3816
+  epoch  4 | train MSE   4.7282 | val MSE   4.0761
+  epoch  5 | train MSE   3.5508 | val MSE   3.4592
+  epoch  6 | train MSE   2.7803 | val MSE   2.6833
+  epoch  7 | train MSE   2.5285 | val MSE   2.7672
+  epoch  8 | train MSE   2.2788 | val MSE   2.5155
+  epoch  9 | train MSE   2.0234 | val MSE   2.4627
+  epoch 10 | train MSE   1.9386 | val MSE   2.1272
+  -> val_mse=2.1272  test_mse=2.1512  test_agreement=0.9925
+
+=== [21/34] compositional_H128_N1 (elapsed 478s) ===
+[compositional_H128_N1] arch=compositional_relu kwargs={'hidden': 128, 'n_blocks': 1} params=150145
+  epoch  1 | train MSE  27.5725 | val MSE   8.1853
+  epoch  2 | train MSE   5.1266 | val MSE   3.6451
+  epoch  3 | train MSE   2.9378 | val MSE   2.8404
+  epoch  4 | train MSE   2.3129 | val MSE   2.4559
+  epoch  5 | train MSE   1.9117 | val MSE   1.9579
+  epoch  6 | train MSE   1.6447 | val MSE   1.9560
+  epoch  7 | train MSE   1.4784 | val MSE   1.6942
+  epoch  8 | train MSE   1.3428 | val MSE   1.7391
+  epoch  9 | train MSE   1.2831 | val MSE   1.4427
+  epoch 10 | train MSE   1.1215 | val MSE   1.4165
+  -> val_mse=1.4165  test_mse=1.3794  test_agreement=0.9955
+
+=== [22/34] deepplain_H128_N1 (elapsed 500s) ===
+[deepplain_H128_N1] arch=deep_plain_mlp kwargs={'hidden': 128, 'n_layers': 3} params=150145
+  epoch  1 | train MSE  30.4364 | val MSE   9.8868
+  epoch  2 | train MSE   6.6953 | val MSE   4.0745
+  epoch  3 | train MSE   3.3985 | val MSE   2.9025
+  epoch  4 | train MSE   2.6520 | val MSE   2.5732
+  epoch  5 | train MSE   2.2147 | val MSE   2.3116
+  epoch  6 | train MSE   1.9134 | val MSE   2.0605
+  epoch  7 | train MSE   1.7309 | val MSE   1.8369
+  epoch  8 | train MSE   1.5849 | val MSE   1.7436
+  epoch  9 | train MSE   1.4425 | val MSE   1.6559
+  epoch 10 | train MSE   1.3206 | val MSE   1.5775
+  -> val_mse=1.5775  test_mse=1.5920  test_agreement=0.9941
+
+=== [23/34] compositional_H128_N2 (elapsed 523s) ===
+[compositional_H128_N2] arch=compositional_relu kwargs={'hidden': 128, 'n_blocks': 2} params=199681
+  epoch  1 | train MSE  24.0143 | val MSE   4.9912
+  epoch  2 | train MSE   3.6295 | val MSE   2.9777
+  epoch  3 | train MSE   2.4423 | val MSE   2.4665
+  epoch  4 | train MSE   1.9961 | val MSE   3.1013
+  epoch  5 | train MSE   1.7041 | val MSE   1.7602
+  epoch  6 | train MSE   1.4591 | val MSE   1.6489
+  epoch  7 | train MSE   1.2975 | val MSE   1.5352
+  epoch  8 | train MSE   1.1668 | val MSE   1.5943
+  epoch  9 | train MSE   1.0859 | val MSE   1.4905
+  epoch 10 | train MSE   1.0120 | val MSE   1.2274
+  -> val_mse=1.2274  test_mse=1.2021  test_agreement=0.9953
+
+=== [24/34] deepplain_H128_N2 (elapsed 551s) ===
+[deepplain_H128_N2] arch=deep_plain_mlp kwargs={'hidden': 128, 'n_layers': 6} params=199681
+  epoch  1 | train MSE  31.3525 | val MSE   7.1198
+  epoch  2 | train MSE   4.4687 | val MSE   3.2969
+  epoch  3 | train MSE   2.9793 | val MSE   2.7373
+  epoch  4 | train MSE   2.3893 | val MSE   3.3037
+  epoch  5 | train MSE   2.0393 | val MSE   1.9606
+  epoch  6 | train MSE   1.7642 | val MSE   1.9778
+  epoch  7 | train MSE   1.5805 | val MSE   2.0320
+  epoch  8 | train MSE   1.4383 | val MSE   1.6983
+  epoch  9 | train MSE   1.3416 | val MSE   1.7624
+  epoch 10 | train MSE   1.2048 | val MSE   1.4693
+  -> val_mse=1.4693  test_mse=1.4482  test_agreement=0.9950
+
+=== [25/34] compositional_H128_N4 (elapsed 578s) ===
+[compositional_H128_N4] arch=compositional_relu kwargs={'hidden': 128, 'n_blocks': 4} params=298753
+  epoch  1 | train MSE  21.6057 | val MSE   4.2478
+  epoch  2 | train MSE   3.1074 | val MSE   2.4555
+  epoch  3 | train MSE   2.1201 | val MSE   2.0315
+  epoch  4 | train MSE   1.7024 | val MSE   1.7413
+  epoch  5 | train MSE   1.4029 | val MSE   1.4930
+  epoch  6 | train MSE   1.2286 | val MSE   1.4807
+  epoch  7 | train MSE   1.1107 | val MSE   1.3498
+  epoch  8 | train MSE   1.0188 | val MSE   1.4392
+  epoch  9 | train MSE   0.9140 | val MSE   1.2153
+  epoch 10 | train MSE   0.8522 | val MSE   1.1759
+  -> val_mse=1.1759  test_mse=1.1321  test_agreement=0.9957
+
+=== [26/34] deepplain_H128_N4 (elapsed 611s) ===
+[deepplain_H128_N4] arch=deep_plain_mlp kwargs={'hidden': 128, 'n_layers': 12} params=298753
+  epoch  1 | train MSE  30.9786 | val MSE   6.9666
+  epoch  2 | train MSE   4.6333 | val MSE   3.3100
+  epoch  3 | train MSE   2.7880 | val MSE   2.5501
+  epoch  4 | train MSE   2.2821 | val MSE   2.3325
+  epoch  5 | train MSE   1.8645 | val MSE   1.8717
+  epoch  6 | train MSE   1.6104 | val MSE   1.9839
+  epoch  7 | train MSE   1.4361 | val MSE   1.5992
+  epoch  8 | train MSE   1.2889 | val MSE   1.9275
+  epoch  9 | train MSE   1.2005 | val MSE   1.5377
+  epoch 10 | train MSE   1.1273 | val MSE   1.4758
+  -> val_mse=1.4758  test_mse=1.4385  test_agreement=0.9952
+
+=== [27/34] compositional_H128_N8 (elapsed 644s) ===
+[compositional_H128_N8] arch=compositional_relu kwargs={'hidden': 128, 'n_blocks': 8} params=496897
+  epoch  1 | train MSE  17.2081 | val MSE   3.4791
+  epoch  2 | train MSE   2.8464 | val MSE   2.4011
+  epoch  3 | train MSE   1.9846 | val MSE   1.9011
+  epoch  4 | train MSE   1.5649 | val MSE   1.7903
+  epoch  5 | train MSE   1.2753 | val MSE   1.5108
+  epoch  6 | train MSE   1.1110 | val MSE   1.5012
+  epoch  7 | train MSE   1.0248 | val MSE   1.2987
+  epoch  8 | train MSE   0.8905 | val MSE   1.1549
+  epoch  9 | train MSE   0.8240 | val MSE   1.0568
+  epoch 10 | train MSE   0.8020 | val MSE   1.0448
+  -> val_mse=1.0448  test_mse=1.0317  test_agreement=0.9957
+
+=== [28/34] deepplain_H128_N8 (elapsed 688s) ===
+[deepplain_H128_N8] arch=deep_plain_mlp kwargs={'hidden': 128, 'n_layers': 24} params=496897
+  epoch  1 | train MSE  36.8227 | val MSE  14.9657
+  epoch  2 | train MSE   8.7238 | val MSE   4.9447
+  epoch  3 | train MSE   4.0151 | val MSE   3.3110
+  epoch  4 | train MSE   3.0361 | val MSE   2.5774
+  epoch  5 | train MSE   2.3005 | val MSE   2.3449
+  epoch  6 | train MSE   1.9900 | val MSE   2.2819
+  epoch  7 | train MSE   1.9157 | val MSE   1.8090
+  epoch  8 | train MSE   1.6151 | val MSE   1.7126
+  epoch  9 | train MSE   1.5410 | val MSE   1.5974
+  epoch 10 | train MSE   1.4256 | val MSE   1.5868
+  -> val_mse=1.5868  test_mse=1.5963  test_agreement=0.9939
+
+=== [29/34] parallel_B2_W16 (elapsed 733s) ===
+[parallel_B2_W16] arch=parallel_bank kwargs={'n_branches': 2, 'branch_width': 16} params=25153
+  epoch  1 | train MSE  52.6150 | val MSE  32.4908
+  epoch  2 | train MSE  27.7863 | val MSE  24.5763
+  epoch  3 | train MSE  23.8804 | val MSE  22.3763
+  epoch  4 | train MSE  21.5543 | val MSE  19.8378
+  epoch  5 | train MSE  18.8219 | val MSE  17.1377
+  epoch  6 | train MSE  16.2522 | val MSE  14.9331
+  epoch  7 | train MSE  14.2176 | val MSE  13.4368
+  epoch  8 | train MSE  12.6338 | val MSE  11.8623
+  epoch  9 | train MSE  10.8302 | val MSE  10.0452
+  epoch 10 | train MSE   9.0312 | val MSE   8.4739
+  -> val_mse=8.4739  test_mse=8.4214  test_agreement=0.9103
+
+=== [30/34] parallel_B4_W16 (elapsed 751s) ===
+[parallel_B4_W16] arch=parallel_bank kwargs={'n_branches': 4, 'branch_width': 16} params=50305
+  epoch  1 | train MSE  45.7901 | val MSE  27.6204
+  epoch  2 | train MSE  25.1114 | val MSE  22.9365
+  epoch  3 | train MSE  21.8557 | val MSE  19.9336
+  epoch  4 | train MSE  18.4122 | val MSE  16.3375
+  epoch  5 | train MSE  14.8248 | val MSE  13.3770
+  epoch  6 | train MSE  12.0163 | val MSE  10.8806
+  epoch  7 | train MSE   9.5479 | val MSE   8.7381
+  epoch  8 | train MSE   7.8199 | val MSE   7.5411
+  epoch  9 | train MSE   6.8353 | val MSE   6.8236
+  epoch 10 | train MSE   6.2042 | val MSE   6.3362
+  -> val_mse=6.3362  test_mse=6.1425  test_agreement=0.9103
+
+=== [31/34] parallel_B4_W32 (elapsed 771s) ===
+[parallel_B4_W32] arch=parallel_bank kwargs={'n_branches': 4, 'branch_width': 32} params=100609
+  epoch  1 | train MSE  41.3045 | val MSE  24.9749
+  epoch  2 | train MSE  22.4073 | val MSE  19.1329
+  epoch  3 | train MSE  16.3571 | val MSE  13.4550
+  epoch  4 | train MSE  11.5246 | val MSE  10.0469
+  epoch  5 | train MSE   8.6404 | val MSE   7.9759
+  epoch  6 | train MSE   7.0858 | val MSE   6.9412
+  epoch  7 | train MSE   6.1850 | val MSE   6.1725
+  epoch  8 | train MSE   5.5909 | val MSE   5.7465
+  epoch  9 | train MSE   5.1602 | val MSE   5.3300
+  epoch 10 | train MSE   4.7981 | val MSE   5.0327
+  -> val_mse=5.0327  test_mse=4.8187  test_agreement=0.9642
+
+=== [32/34] parallel_B8_W32 (elapsed 792s) ===
+[parallel_B8_W32] arch=parallel_bank kwargs={'n_branches': 8, 'branch_width': 32} params=201217
+  epoch  1 | train MSE  35.7257 | val MSE  21.3327
+  epoch  2 | train MSE  16.9157 | val MSE  13.0467
+  epoch  3 | train MSE  10.5174 | val MSE   8.9311
+  epoch  4 | train MSE   7.5053 | val MSE   6.9724
+  epoch  5 | train MSE   6.1208 | val MSE   6.0387
+  epoch  6 | train MSE   5.3414 | val MSE   5.3482
+  epoch  7 | train MSE   4.8239 | val MSE   4.9185
+  epoch  8 | train MSE   4.4288 | val MSE   4.5758
+  epoch  9 | train MSE   4.1094 | val MSE   4.3301
+  epoch 10 | train MSE   3.8160 | val MSE   3.9884
+  -> val_mse=3.9884  test_mse=3.8660  test_agreement=0.9758
+
+=== [33/34] parallel_B16_W32 (elapsed 818s) ===
+[parallel_B16_W32] arch=parallel_bank kwargs={'n_branches': 16, 'branch_width': 32} params=402433
+  epoch  1 | train MSE  31.5829 | val MSE  17.0287
+  epoch  2 | train MSE  12.9462 | val MSE   9.7667
+  epoch  3 | train MSE   7.7804 | val MSE   6.7929
+  epoch  4 | train MSE   5.8380 | val MSE   5.5563
+  epoch  5 | train MSE   4.9295 | val MSE   4.9728
+  epoch  6 | train MSE   4.4119 | val MSE   4.5060
+  epoch  7 | train MSE   4.0324 | val MSE   4.2088
+  epoch  8 | train MSE   3.7079 | val MSE   3.8988
+  epoch  9 | train MSE   3.4329 | val MSE   3.6438
+  epoch 10 | train MSE   3.1751 | val MSE   3.4233
+  -> val_mse=3.4233  test_mse=3.2556  test_agreement=0.9815
+
+=== [34/34] parallel_B32_W16 (elapsed 853s) ===
+[parallel_B32_W16] arch=parallel_bank kwargs={'n_branches': 32, 'branch_width': 16} params=402433
+  epoch  1 | train MSE  31.7287 | val MSE  17.2689
+  epoch  2 | train MSE  12.7375 | val MSE   9.4258
+  epoch  3 | train MSE   7.6115 | val MSE   6.6825
+  epoch  4 | train MSE   5.8019 | val MSE   5.5347
+  epoch  5 | train MSE   4.9172 | val MSE   4.9553
+  epoch  6 | train MSE   4.4000 | val MSE   4.4983
+  epoch  7 | train MSE   4.0111 | val MSE   4.1753
+  epoch  8 | train MSE   3.6839 | val MSE   3.8713
+  epoch  9 | train MSE   3.4108 | val MSE   3.6148
+  epoch 10 | train MSE   3.1573 | val MSE   3.3894
+  -> val_mse=3.3894  test_mse=3.2272  test_agreement=0.9820
+
+done in 894s -> E:\projects\PytorchExperiments\experiments\05_function_distillation\outputs\results.csv

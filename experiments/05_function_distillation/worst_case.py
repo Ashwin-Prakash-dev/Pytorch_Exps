@@ -30,7 +30,6 @@ from common import TeacherLogitDataset  # noqa: E402
 from models import CompositionalReLUMLP, build_model  # noqa: E402
 from sweep import build_configs  # noqa: E402
 from teacher import load_frozen_teacher  # noqa: E402
-from utils import save_image_grid  # noqa: E402
 
 OUTPUTS = HERE / "outputs"
 CHECKPOINTS = OUTPUTS / "checkpoints"
@@ -119,16 +118,36 @@ def main() -> None:
     for r in rows[:5]:
         print(r)
 
-    images_np = [test_set.images[i, 0].numpy() for i in worst_idx.tolist()]
-    true_lbl = [f"gt{r['ground_truth_label']} cnn{r['cnn_logit']:.1f}" for r in rows]
-    pred_lbl = [f"mlp{r['mlp_logit']:.1f}" for r in rows]
-    save_image_grid(
-        images_np, true_lbl, pred_lbl,
-        WORST_CASES / f"{args.model}_worst_cases.png",
-        title=f"{args.model}: worst teacher/student disagreements (test set)",
-        n=args.top_k,
-    )
-    print(f"saved {WORST_CASES / f'{args.model}_worst_cases.png'}")
+    # A custom grid, not utils.save_image_grid: that helper colors by
+    # true_label == pred_label, which doesn't apply here -- these rows can
+    # have large |logit| disagreement while still agreeing on the class
+    # (is-it-an-8) decision. Color instead by whether the *classifications*
+    # actually disagree, which is the more meaningful red flag.
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    cols = 4
+    n = len(rows)
+    grid_rows = (n + cols - 1) // cols
+    fig, axes = plt.subplots(grid_rows, cols, figsize=(2.4 * cols, 2.6 * grid_rows))
+    for ax, i, r in zip(axes.flat, worst_idx.tolist(), rows):
+        class_disagree = r["cnn_pred_is_8"] != r["mlp_pred_is_8"]
+        ax.imshow(test_set.images[i, 0].numpy(), cmap="gray")
+        ax.set_title(
+            f"gt{r['ground_truth_label']}  cnn{r['cnn_logit']:.1f}/mlp{r['mlp_logit']:.1f}"
+            f"\n|err|={r['abs_error']:.1f}" + (" CLASS DISAGREE" if class_disagree else ""),
+            fontsize=8, color="crimson" if class_disagree else "black",
+        )
+        ax.axis("off")
+    for ax in axes.flat[n:]:
+        ax.axis("off")
+    fig.suptitle(f"{args.model}: worst teacher/student disagreements (test set)")
+    fig.tight_layout()
+    out_path = WORST_CASES / f"{args.model}_worst_cases.png"
+    fig.savefig(out_path, dpi=120)
+    plt.close(fig)
+    print(f"saved {out_path}")
 
     if config["arch"] == "compositional_relu":
         images = test_set.images.float() / 255.0
