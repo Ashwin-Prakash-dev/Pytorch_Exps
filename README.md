@@ -22,10 +22,12 @@ PytorchExperiments/
 ├── experiments/
 │   ├── 01_linear_regression/   # each: train.py + README.md + outputs/
 │   ├── 02_sine_wave_linear/    #   (committed plots so results show on GitHub)
-│   └── 03_sine_wave_mlp/
+│   ├── 03_sine_wave_mlp/
+│   └── 04_mnist_cnn_digit8/
 ├── notebooks/                  # interactive companions (inline plots + prose)
 │   ├── 01_linear_regression.ipynb
-│   └── 02_sine_wave_linear_vs_mlp.ipynb
+│   ├── 02_sine_wave_linear_vs_mlp.ipynb
+│   └── 04_mnist_cnn_digit8.ipynb
 ├── requirements.txt
 └── README.md
 ```
@@ -71,6 +73,7 @@ jupyter lab        # then open notebooks/01_linear_regression.ipynb
 | 01 | [Linear regression](experiments/01_linear_regression/) | `Linear(1,1)` | ✅ done | The 5-step training loop; a linear layer *is* regression; the noise floor |
 | 02 | [Sine wave — linear layer](experiments/02_sine_wave_linear/) | `Linear(1,1)` | ✅ done | A linear model **fails** on nonlinear data (loss ~0.41) — motivates hidden layers |
 | 03 | [Sine wave — MLP](experiments/03_sine_wave_mlp/) | `Linear → ReLU → Linear` | ✅ done | A hidden layer + ReLU fits the curve (loss ~0.01); ReLU = piecewise-linear |
+| 04 | [MNIST CNN — is this an 8?](experiments/04_mnist_cnn_digit8/) | `Conv → ReLU → MaxPool ×2 → Linear` | ✅ done | First real dataset + CNN + classification; 99.1% test accuracy vs. a 90.3% do-nothing baseline — precision/recall catch what accuracy alone would hide |
 
 Experiments 02 & 03 share one [comparison notebook](notebooks/02_sine_wave_linear_vs_mlp.ipynb) that runs both side by side — the clearest way to *see* why nonlinearity matters.
 
@@ -82,4 +85,5 @@ The natural progression from here:
 2. **Optimization** — SGD vs. Adam, learning-rate effects, mini-batching with
    `DataLoader`.
 3. **Generalization** — overfitting, train/val gaps, regularization.
-4. **Scaling up** — deeper MLPs, then a real dataset (e.g. MNIST) and CNNs.
+4. ~~**Scaling up** — a real dataset (MNIST) and a CNN (04).~~ ✅ Next: the
+   full 10-way digit classifier.

@@ -223,7 +223,8 @@ def main() -> None:
         OUTPUTS / "predictions.png",
         title="Experiment 04 -- is this an 8? (true / pred, mistakes in red)",
     )
-    print(f"saved plots to {OUTPUTS}")
+    torch.save(model.state_dict(), OUTPUTS / "model.pt")
+    print(f"saved plots and model.pt to {OUTPUTS}")
 
 
 if __name__ == "__main__":
