@@ -23,22 +23,61 @@ def save_loss_curve(
     path: str | Path,
     title: str = "Training loss",
     log_y: bool = True,
+    ylabel: str = "loss",
+    labels: tuple[str, str] = ("train", "val"),
 ) -> None:
-    """Plot loss vs. epoch. A log y-axis usually makes the descent readable."""
+    """Plot a metric vs. epoch. A log y-axis usually makes loss descent readable."""
     path = _prep(path)
     epochs = range(1, len(train_losses) + 1)
 
     fig, ax = plt.subplots(figsize=(7, 4.5))
-    ax.plot(epochs, train_losses, label="train")
+    ax.plot(epochs, train_losses, label=labels[0])
     if val_losses is not None:
-        ax.plot(epochs, val_losses, label="val")
+        ax.plot(epochs, val_losses, label=labels[1])
     if log_y:
         ax.set_yscale("log")
     ax.set_xlabel("epoch")
-    ax.set_ylabel("loss" + (" (log scale)" if log_y else ""))
+    ax.set_ylabel(ylabel + (" (log scale)" if log_y else ""))
     ax.set_title(title)
     ax.legend()
     ax.grid(True, alpha=0.3)
+    fig.tight_layout()
+    fig.savefig(path, dpi=120)
+    plt.close(fig)
+
+
+def save_image_grid(
+    images: Sequence,
+    true_labels: Sequence,
+    pred_labels: Sequence,
+    path: str | Path,
+    title: str = "Predictions",
+    n: int = 16,
+) -> None:
+    """Show a grid of images with true vs. predicted labels (wrong ones in red).
+
+    ``images`` are 2D arrays (H, W) already on CPU; ``true_labels`` /
+    ``pred_labels`` are anything ``str()``-able (ints, bools, ...).
+    """
+    path = _prep(path)
+    n = min(n, len(images))
+    cols = 4
+    rows = (n + cols - 1) // cols
+
+    fig, axes = plt.subplots(rows, cols, figsize=(2.2 * cols, 2.4 * rows))
+    for i, ax in enumerate(axes.flat):
+        if i >= n:
+            ax.axis("off")
+            continue
+        correct = true_labels[i] == pred_labels[i]
+        ax.imshow(images[i], cmap="gray")
+        ax.set_title(
+            f"true {true_labels[i]} / pred {pred_labels[i]}",
+            fontsize=9,
+            color="black" if correct else "crimson",
+        )
+        ax.axis("off")
+    fig.suptitle(title)
     fig.tight_layout()
     fig.savefig(path, dpi=120)
     plt.close(fig)

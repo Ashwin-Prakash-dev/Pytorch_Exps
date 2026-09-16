@@ -7,11 +7,12 @@ boilerplate that would otherwise be copy-pasted everywhere.
 
 from .seed import set_seed
 from .device import get_device
-from .plotting import save_loss_curve, save_regression_fit
+from .plotting import save_loss_curve, save_regression_fit, save_image_grid
 
 __all__ = [
     "set_seed",
     "get_device",
     "save_loss_curve",
     "save_regression_fit",
+    "save_image_grid",
 ]
