@@ -4,6 +4,13 @@ torchvision>=0.24
 numpy>=2.0
 matplotlib>=3.10
 
+# CIFAR-10 loader (experiment 06+): reads Hugging Face's parquet mirror
+# directly, since torchvision's own CIFAR-10 download source was unusably
+# slow/unstable when this repo was built. See experiment 06's README.
+pandas>=2.0
+pyarrow>=14.0
+pillow>=10.0
+
 # Notebooks
 jupyter>=1.0
 ipykernel>=6.0

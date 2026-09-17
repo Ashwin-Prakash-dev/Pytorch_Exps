@@ -24,12 +24,16 @@ PytorchExperiments/
 │   ├── 02_sine_wave_linear/    #   (committed plots so results show on GitHub)
 │   ├── 03_sine_wave_mlp/
 │   ├── 04_mnist_cnn_digit8/
-│   └── 05_function_distillation/
+│   ├── 05_function_distillation/
+│   ├── 06_cifar10_cnn_airplane/
+│   └── 07_function_distillation_cifar10/
 ├── notebooks/                  # interactive companions (inline plots + prose)
 │   ├── 01_linear_regression.ipynb
 │   ├── 02_sine_wave_linear_vs_mlp.ipynb
 │   ├── 04_mnist_cnn_digit8.ipynb
-│   └── 05_function_distillation_analysis.ipynb
+│   ├── 05_function_distillation_analysis.ipynb
+│   ├── 06_cifar10_cnn_airplane.ipynb
+│   └── 07_function_distillation_cifar10_analysis.ipynb
 ├── requirements.txt
 └── README.md
 ```
@@ -77,6 +81,8 @@ jupyter lab        # then open notebooks/01_linear_regression.ipynb
 | 03 | [Sine wave — MLP](experiments/03_sine_wave_mlp/) | `Linear → ReLU → Linear` | ✅ done | A hidden layer + ReLU fits the curve (loss ~0.01); ReLU = piecewise-linear |
 | 04 | [MNIST CNN — is this an 8?](experiments/04_mnist_cnn_digit8/) | `Conv → ReLU → MaxPool ×2 → Linear` | ✅ done | First real dataset + CNN + classification; 99.1% test accuracy vs. a 90.3% do-nothing baseline — precision/recall catch what accuracy alone would hide |
 | 05 | [Function distillation — CNN → MLP](experiments/05_function_distillation/) | 5 ReLU-MLP architectures vs. a frozen CNN | ✅ done | Not classification — a *function-representation* study: can flat MLPs (no conv, no pooling) learn to reproduce a trained CNN's logit function? Residual composition beats parameter-matched plain depth and parallel width; a plain (non-residual) stack even gets *worse* past 4 blocks — a toy-scale echo of the ResNet degradation problem |
+| 06 | [CIFAR-10 CNN — is this an airplane?](experiments/06_cifar10_cnn_airplane/) | `Conv → ReLU → MaxPool ×3 → Linear` | ✅ done | The RGB, harder-dataset sequel to 04; 94.9% test accuracy vs. a 90.0% baseline — real photographs are a genuinely harder gap to close than clean digits |
+| 07 | [Function distillation, repeated — CIFAR-10](experiments/07_function_distillation_cifar10/) | Same 5 architectures vs. experiment 06's frozen CNN | ✅ done | Experiment 05's study replicated on a harder, unrelated teacher: the same residual-beats-plain and parallel-underperforms findings hold up (and sharpen), but a real, honest difference emerges — earlier diminishing returns, a much sharper ground-truth recall collapse for small students, and more genuine classification errors in the worst-case analysis |
 
 Experiments 02 & 03 share one [comparison notebook](notebooks/02_sine_wave_linear_vs_mlp.ipynb) that runs both side by side — the clearest way to *see* why nonlinearity matters.
 
@@ -90,5 +96,7 @@ The natural progression from here:
 3. **Generalization** — overfitting, train/val gaps, regularization.
 4. ~~**Scaling up** — a real dataset (MNIST) and a CNN (04).~~ ✅
 5. ~~**Function representation** — can a non-convolutional architecture learn
-   a CNN's function (05)?~~ ✅ Next: the full 10-way digit classifier, or
-   pushing the distillation idea to a harder teacher.
+   a CNN's function (05)?~~ ✅
+6. ~~**A harder teacher** — repeat 04-05 on CIFAR-10 (06-07).~~ ✅ Next: the
+   full 10-way digit/class classifiers, or pushing distillation to an even
+   harder target class.

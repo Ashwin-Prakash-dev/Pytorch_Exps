@@ -1,0 +1,20 @@
+device: cpu
+train: 45000  val: 5000  test: 10000
+model: CNN, 89249 parameters
+epoch  1 | train loss 0.2628 | val loss 0.2477 | val acc 0.9128 | val precision 0.7788 | val recall 0.1640
+epoch  2 | train loss 0.2155 | val loss 0.2120 | val acc 0.9190 | val precision 0.6705 | val recall 0.3543
+epoch  3 | train loss 0.1999 | val loss 0.1983 | val acc 0.9238 | val precision 0.7116 | val recall 0.3846
+epoch  4 | train loss 0.1809 | val loss 0.1780 | val acc 0.9324 | val precision 0.7216 | val recall 0.5142
+epoch  5 | train loss 0.1652 | val loss 0.1654 | val acc 0.9374 | val precision 0.7987 | val recall 0.4899
+epoch  6 | train loss 0.1554 | val loss 0.1921 | val acc 0.9314 | val precision 0.8756 | val recall 0.3563
+epoch  7 | train loss 0.1433 | val loss 0.1539 | val acc 0.9414 | val precision 0.7433 | val recall 0.6215
+epoch  8 | train loss 0.1384 | val loss 0.1721 | val acc 0.9342 | val precision 0.6476 | val recall 0.7328
+epoch  9 | train loss 0.1301 | val loss 0.1468 | val acc 0.9456 | val precision 0.7984 | val recall 0.6012
+epoch 10 | train loss 0.1191 | val loss 0.1492 | val acc 0.9468 | val precision 0.8276 | val recall 0.5830
+epoch 11 | train loss 0.1122 | val loss 0.1503 | val acc 0.9402 | val precision 0.6802 | val recall 0.7449
+epoch 12 | train loss 0.1036 | val loss 0.1529 | val acc 0.9466 | val precision 0.8626 | val recall 0.5466
+
+test accuracy:  0.9486  (always-'not airplane' baseline: 0.9000)
+test precision: 0.8716
+test recall:    0.5700
+saved plots and model.pt to E:\projects\PytorchExperiments\experiments\06_cifar10_cnn_airplane\outputs
