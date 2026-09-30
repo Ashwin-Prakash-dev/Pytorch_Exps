@@ -1,0 +1,10 @@
+image A: test index 18, label 3
+image B: test index 0, label 7
+
+max weight diff before vs after image A: 0.0
+max weight diff after image A vs after image B: 0.0
+max weight diff before vs after image B: 0.0
+
+mean |activation difference| across filters: 0.2304
+max |activation difference| (single filter): 0.5470
+filters differing by > 1e-4: 23 / 24

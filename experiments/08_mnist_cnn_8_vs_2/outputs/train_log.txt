@@ -1,0 +1,13 @@
+device: cpu
+train: 10809  val: 1000  test: 2006  (filtered to digits 2 and 8 only)
+model: CNN, 26401 parameters
+epoch  1 | train loss 0.2824 | val loss 0.1231 | val acc 0.9620 | val precision 0.9776 | val recall 0.9467
+epoch  2 | train loss 0.0767 | val loss 0.0861 | val acc 0.9730 | val precision 0.9781 | val recall 0.9684
+epoch  3 | train loss 0.0583 | val loss 0.0712 | val acc 0.9750 | val precision 0.9782 | val recall 0.9724
+epoch  4 | train loss 0.0444 | val loss 0.0551 | val acc 0.9840 | val precision 0.9900 | val recall 0.9783
+epoch  5 | train loss 0.0395 | val loss 0.0469 | val acc 0.9860 | val precision 0.9920 | val recall 0.9803
+
+test accuracy:  0.9920  (majority-class baseline: 0.5145)
+test precision: 0.9878
+test recall:    0.9959
+saved plots and model.pt to E:\projects\PytorchExperiments\experiments\08_mnist_cnn_8_vs_2\outputs

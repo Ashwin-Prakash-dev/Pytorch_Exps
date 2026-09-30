@@ -1,0 +1,12 @@
+device: cpu
+train: 9000  val: 1000  test: 2000  (filtered to automobile and airplane only)
+model: CNN, 89249 parameters
+
+[stdout buffering swallowed the per-epoch lines for this run -- final
+metrics recomputed directly from the saved checkpoint below, confirmed
+to match the plots in this outputs/ directory.]
+
+test accuracy:  0.9525  (majority-class baseline: 0.5000)
+test precision: 0.9622
+test recall:    0.9420
+saved plots and model.pt to outputs/
