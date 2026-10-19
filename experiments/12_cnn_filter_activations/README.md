@@ -227,7 +227,7 @@ different images do activate different filters, in both magnitude (exp.
 2-3, quantified via ANOVA, all live filters p<0.001) and in *which subset*
 counts as most-active (exp. 4, top-8 Jaccard 0.70 same-class vs. 0.56
 different-class, p≈5×10⁻¹⁹⁵). This is not merely "the numbers are a bit
-different" — it's a large, statistically robust, multiply-convergent
+different" but a large, statistically robust, multiply-convergent
 effect (the same 3-vs-5 pattern shows up independently in the class
 correlation matrix, the ANOVA effect sizes, and the raw top-9 image
 search). But the *qualification* matters as much as the headline: classes
